@@ -12,3 +12,6 @@ alias ll='ls -alF'
 alias ls='ls --color=auto'
 alias t='l -rt'
 
+# git
+alias av='git branch -av'
+alias suno='git status -s -uno'
