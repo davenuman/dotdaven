@@ -121,3 +121,12 @@ for incl in ~/.bash_inc/*.bash ~/.bash_inc/*.sh
   do . $incl
 done
 
+# Quick change dir to within this list.
+CDPATH=$CDPATH:$HOME/workspace/:$HOME/workspace/modules/:$HOME/Documents
+
+shopt -s autocd
+shopt -s cdspell
+export HISTCONTROL=ignoredups:erasedups
+export HISTIGNORE='history*'
+
+
