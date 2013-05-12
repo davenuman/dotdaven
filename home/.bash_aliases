@@ -1,5 +1,5 @@
 
-
+# misc
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias grep='grep --color=auto'
@@ -11,7 +11,16 @@ alias la='ls -A'
 alias ll='ls -alF'
 alias ls='ls --color=auto'
 alias t='l -rt'
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+
+# Shortcuts
+alias dl='cd ~/Downloads'
+alias wl='cd ~/workspace; ls'
 
 # git
 alias av='git branch -av'
 alias suno='git status -s -uno'
+alias rv='git remote -v'
+
