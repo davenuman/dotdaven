@@ -10,9 +10,10 @@ function prompt() {
   fi
 
   local prompt_char='» '
-#  [[ $(grep `pwd` ~/.drush/*aliases.drushrc.php) ]] && prompt_char='∞ '
+  local drupal=$(__drush_ps1)
+  [[ $DRUPAL_SITE ]] && prompt_char="$blue ∞ "
 
-  PS1="$(scm_char) [$blue\u$reset_color@$green\H$reset_color] $yellow\w${reset_color}$git_prompt$red$prompt_char$reset_color"
+  PS1="$(scm_char) [$blue\u$reset_color@$green\H$reset_color] $yellow\w${reset_color}$git_prompt$red$DRUPAL_SITE$prompt_char$reset_color"
   PS2='> '
   PS4='+ '
 }
