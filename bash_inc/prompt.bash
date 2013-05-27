@@ -12,7 +12,7 @@ function prompt() {
   local prompt_char='» '
   [[ $(__drush_ps1) ]] && prompt_char="$blue∞ "
 
-  PS1="$red$(scm_char) ${reset_color}\u@\H $yellow\w${reset_color}$git_prompt\n$red$(__drush_ps1) $prompt_char$reset_color"
+  PS1="$(scm_char) [$blue\u$reset_color@$green\H$reset_color] $yellow\w${reset_color}$git_prompt\n$red$(__drush_ps1) $prompt_char$reset_color"
   PS2='> '
   PS4='+ '
 }
