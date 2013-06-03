@@ -6,6 +6,8 @@ alias grep='grep --color=auto'
 alias homeshick='/home/dave/.homesick/repos/homeshick/home/.homeshick'
 alias dr='drush'
 alias h='drush_help'
+alias si='drush_si'
+alias fastplay='mplayer -af scaletempo -speed 1.33'
 
 # dir listing
 alias l='ls -alh'
