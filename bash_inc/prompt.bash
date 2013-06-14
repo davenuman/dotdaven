@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 function prompt() {
-  local time="$grey `date +%T`"
+  local time="$grey`date +%T`"
   local git_branch="$(git_short_sha)$(scm_prompt_info)"
   if [[ $git_branch ]]
   then
@@ -13,7 +13,7 @@ function prompt() {
   local prompt_char='» '
   [[ $(__drush_ps1) ]] && prompt_char="$blue∞ "
 
-  PS1="$(scm_char)$time $white[$blue\u$reset_color@$green\H$reset_color] $yellow\w${reset_color}$git_prompt\n$red$(__drush_ps1) $prompt_char$reset_color"
+  PS1="$(scm_char) $white[$blue\u$reset_color@$green\H$reset_color] $yellow\w${reset_color}$git_prompt\n$time$red$(__drush_ps1) $prompt_char$reset_color"
   PS2='> '
   PS4='+ '
 }
