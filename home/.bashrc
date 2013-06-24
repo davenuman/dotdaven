@@ -117,7 +117,7 @@ alias homeshick="$HOME/.homesick/repos/homeshick/home/.homeshick"
 
 # Include custom bash scripts
 BASH_INC=~/.homesick/repos/dotdaven/bash_inc
-for incl in $BASH_INC/*.bash $BASH_INC/*.sh
+for incl in $BASH_INC/*.sh $BASH_INC/*.bash
   do . $incl
 done
 

@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
 function prompt() {
+  . $BASH_INC/drush.complete.sh
+
   local time="$grey`date +%T`"
   local git_branch="$(git_short_sha)$(scm_prompt_info)"
   if [[ $git_branch ]]
