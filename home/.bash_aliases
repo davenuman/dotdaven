@@ -8,6 +8,7 @@ alias dr='drush'
 alias h='drush_help'
 alias si='drush_si'
 alias fastplay='mplayer -af scaletempo -speed 1.33'
+alias less='less -R'
 
 # dir listing
 alias l='ls -alh'
@@ -27,4 +28,5 @@ alias wl='cd ~/workspace; ls'
 alias av='git branch -av'
 alias suno='git status -s -uno'
 alias rv='git remote -v'
+alias staged='git diff --staged'
 
