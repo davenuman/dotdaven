@@ -7,6 +7,7 @@ alias homeshick='/home/dave/.homesick/repos/homeshick/home/.homeshick'
 alias dr='drush'
 alias h='drush_help'
 alias si='drush_si'
+alias retool='drush pm-disable -y toolbar && drush pm-enable -y admin_menu admin_menu_toolbar'
 alias fastplay='mplayer -af scaletempo -speed 1.33'
 alias less='less -R'
 
