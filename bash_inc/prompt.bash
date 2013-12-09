@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 function prompt() {
-  . $BASH_INC/drush.complete.sh
 
   local time="$grey`date +%T`"
   local git_branch="$(git_short_sha)$(scm_prompt_info)"
@@ -13,9 +12,8 @@ function prompt() {
   fi
 
   local prompt_char='» '
-  [[ $(__drush_ps1) ]] && prompt_char="$blue∞ "
 
-  PS1="$(scm_char) $white[$blue\u$reset_color@$green\H$reset_color] $yellow\w${reset_color}$git_prompt\n$time$red$(__drush_ps1) $prompt_char$reset_color"
+  PS1="$(scm_char) $white[$blue\u$reset_color@$green\H$reset_color] $yellow\w${reset_color}$git_prompt\n$time$red $prompt_char$reset_color"
   PS2='> '
   PS4='+ '
 }
