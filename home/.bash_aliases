@@ -27,6 +27,7 @@ alias wl='cd ~/workspace; ls'
 
 # git
 alias av='git branch -av'
+alias bv='git branch -v'
 alias suno='git status -s -uno'
 alias rv='git remote -v'
 alias staged='git diff --staged'
