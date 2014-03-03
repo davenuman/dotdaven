@@ -15,6 +15,7 @@
 	st = status
 	graphlog = log --oneline --graph --branches
 	g = grep -n --color
+	d = difftool
 [push]
 	default = simple
 [branch]
@@ -23,3 +24,9 @@
 	helper = cache --timeout=7200
 [log]
 	abbrevCommit = true
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[merge]
+	tool = vimdiff
