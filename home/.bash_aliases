@@ -10,6 +10,7 @@ alias si='drush_si'
 alias retool='drush pm-disable -y toolbar && drush pm-enable -y admin_menu admin_menu_toolbar'
 alias fastplay='mplayer -af scaletempo -speed 1.33'
 alias less='less -R'
+alias ssh='TERM=rxvt && ssh'
 
 # dir listing
 alias l='ls -alh'
