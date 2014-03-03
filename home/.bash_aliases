@@ -3,7 +3,6 @@
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias grep='grep --color=auto'
-alias homeshick='/home/dave/.homesick/repos/homeshick/home/.homeshick'
 alias dr='drush'
 alias h='drush_help'
 alias si='drush_si'
@@ -11,6 +10,7 @@ alias retool='drush pm-disable -y toolbar && drush pm-enable -y admin_menu admin
 alias fastplay='mplayer -af scaletempo -speed 1.33'
 alias less='less -R'
 alias ssh='TERM=rxvt && ssh'
+alias 3cal='cal -3 `date -d "+1 month" +"%m %Y"`'
 
 # dir listing
 alias l='ls -alh'

@@ -5,7 +5,7 @@ call pathogen#infect('/home/dave/.vim/bundle/{}')
 " End of vimrc-install additions.
 execute pathogen#infect()
 syntax on
-"filetype plugin indent on
+filetype plugin indent on
 
 set background=dark
 colorscheme solarized
@@ -17,6 +17,7 @@ let g:syntastic_php_phpcs_args = '--standard=Drupal --report=csv  --extensions='
 set nu
 set rnu
 set ruler
+autocmd BufWritePre * :%s/\s\+$//e
 
 " allow backspacing over everything in insert mode
 "set backspace=indent,eol,start
