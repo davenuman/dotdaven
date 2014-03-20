@@ -11,6 +11,8 @@ alias fastplay='mplayer -af scaletempo -speed 1.33'
 alias less='less -R'
 alias ssh='TERM=rxvt && ssh'
 alias 3cal='cal -3 `date -d "+1 month" +"%m %Y"`'
+alias vim='TERM=rxvt-unicode-256color vim'
+alias vimrc='vim $HOME/.vimrc'
 
 # dir listing
 alias l='ls -alh'
@@ -32,4 +34,5 @@ alias bv='git branch -v'
 alias suno='git status -s -uno'
 alias rv='git remote -v'
 alias staged='git diff --staged'
+alias backone='git co HEAD^ && git show --stat'
 

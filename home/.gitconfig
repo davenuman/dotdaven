@@ -16,6 +16,7 @@
 	graphlog = log --oneline --graph --branches
 	g = grep -n --color
 	d = difftool
+	vimshow = difftool HEAD^
 [push]
 	default = simple
 [branch]
