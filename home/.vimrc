@@ -18,6 +18,10 @@ set nu
 set rnu
 set ruler
 autocmd BufWritePre * :%s/\s\+$//e
+set hlsearch
+set cursorline
+set modeline
+set ls=2
 
 " allow backspacing over everything in insert mode
 "set backspace=indent,eol,start

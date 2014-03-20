@@ -10,7 +10,7 @@ SCM_GIT='git'
 SCM_GIT_CHAR='±'
 
 SCM_NONE='NONE'
-SCM_NONE_CHAR='○'
+SCM_NONE_CHAR='°'
 
 function scm {
   if [[ -f .git/HEAD ]]; then SCM=$SCM_GIT
