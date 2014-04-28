@@ -128,8 +128,13 @@ shopt -s autocd
 shopt -s cdspell
 export HISTCONTROL=ignoredups:erasedups
 export HISTIGNORE='history*'
+export EDITOR=vim
+export BROWSER=google-chrome-stable
 
 function setwintitle() {
   echo -en "\033]0;$@\007";
 }
 
+if [ -f ~/.bash_extras ]; then
+    . ~/.bash_extras
+fi
