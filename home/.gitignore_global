@@ -1,4 +1,9 @@
-.buildpath
-.project
-.settings
-.idea
+# vim
+*.swp
+.tags
+
+# SASS
+*.sass-cache
+
+# Composer
+composer.lock

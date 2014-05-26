@@ -135,6 +135,10 @@ function setwintitle() {
   echo -en "\033]0;$@\007";
 }
 
+function relink {
+  echo "rm -vi $2 && ln -s $1 $2";
+}
+
 if [ -f ~/.bash_extras ]; then
     . ~/.bash_extras
 fi

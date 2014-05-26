@@ -20,6 +20,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tagbar#enabled = 1
 
+setl sw=2 sts=2 et
 
 " my settings
 set nu
@@ -30,6 +31,7 @@ set hlsearch
 set cursorline
 set modeline
 set ls=2
+set wildchar=<Tab> wildmenu wildmode=full
 set statusline=[%n]\    "buffer
 set statusline+=%t\      "tail of the filename
 set statusline+=[%{strlen(&fenc)?&fenc:'none'}, "file encoding
@@ -46,6 +48,12 @@ set statusline+=\ %P    "percent through file
 
 " set syntax to markdown for .md files
 au BufRead,BufNewFile *.md set filetype=markdown
+" twig files
+au BufRead,BufNewFile *.twig set filetype=html
+" gherkin
+au FileType cucumber setl sw=4 sts=4 et
+
+let g:notes_directories = ['~/documents/notes']
 
 " allow backspacing over everything in insert mode
 "set backspace=indent,eol,start

@@ -1,8 +1,9 @@
 [user]
 	name = David Numan
-	email = dave@gv.ca
+	email = david.numan@civicactions.com
 [core]
 	autocrlf = false
+	excludesfile = /home/dave/.gitignore_global
 [diff]
 [color]
 	branch = auto
