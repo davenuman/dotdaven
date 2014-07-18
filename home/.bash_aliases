@@ -3,7 +3,6 @@
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias grep='grep --color=auto'
-alias homeshick='/home/dave/.homesick/repos/homeshick/home/.homeshick'
 alias dr='drush'
 alias h='drush_help'
 alias si='drush_si'

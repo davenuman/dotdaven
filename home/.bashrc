@@ -113,7 +113,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-alias homeshick="$HOME/.homesick/repos/homeshick/home/.homeshick"
+source $HOME/.homesick/repos/homeshick/homeshick.sh
 
 # Include custom bash scripts
 BASH_INC=~/.homesick/repos/dotdaven/bash_inc
