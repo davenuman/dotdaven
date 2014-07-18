@@ -121,6 +121,9 @@ for incl in $BASH_INC/*.sh $BASH_INC/*.bash
   do . $incl
 done
 
+# Add task completion for t command
+complete -o nospace -F _task t
+
 # Quick change dir to within this list.
 CDPATH=$CDPATH:$HOME/workspace/:$HOME/workspace/modules/:$HOME/Documents
 
@@ -130,13 +133,18 @@ export HISTCONTROL=ignoredups:erasedups
 export HISTIGNORE='history*'
 export EDITOR=vim
 export BROWSER=google-chrome-stable
+export PATH=$PATH:~/.gem/ruby/2.1.0/bin
 
 function setwintitle() {
   echo -en "\033]0;$@\007";
 }
 
 function relink {
-  echo "rm -vi $2 && ln -s $1 $2";
+  echo "rm -vf $2 && ln -s $1 $2";
+  echo "Press enter to continue, Ctrl-C to cancel.";
+  read;
+  rm -vf $2 && ln -s $1 $2
+  ls -l $2
 }
 
 if [ -f ~/.bash_extras ]; then

@@ -23,6 +23,7 @@ let g:airline#extensions#tagbar#enabled = 1
 setl sw=2 sts=2 et
 
 " my settings
+set autochdir
 set nu
 set rnu
 set ruler
@@ -32,6 +33,7 @@ set cursorline
 set modeline
 set ls=2
 set wildchar=<Tab> wildmenu wildmode=full
+set gfn=Inconsolata\ Medium\ 26
 set statusline=[%n]\    "buffer
 set statusline+=%t\      "tail of the filename
 set statusline+=[%{strlen(&fenc)?&fenc:'none'}, "file encoding
