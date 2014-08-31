@@ -33,7 +33,7 @@ set cursorline
 set modeline
 set ls=2
 set wildchar=<Tab> wildmenu wildmode=full
-set gfn=Inconsolata\ Medium\ 26
+set gfn=Inconsolata\ for\ Powerline\ Medium\ 28
 set statusline=[%n]\    "buffer
 set statusline+=%t\      "tail of the filename
 set statusline+=[%{strlen(&fenc)?&fenc:'none'}, "file encoding
@@ -54,10 +54,18 @@ au BufRead,BufNewFile *.md set filetype=markdown
 au BufRead,BufNewFile *.twig set filetype=html
 " gherkin
 au FileType cucumber setl sw=4 sts=4 et
+" bash
+au FileType sh setl sw=2 sts=2 et
 
 let g:notes_directories = ['~/documents/notes']
 
-" allow backspacing over everything in insert mode
+" gvim options
+set guioptions-=m  "remove menu bar
+set guioptions-=T  "remove toolbar
+set guioptions-=r  "remove right-hand scroll bar
+set guioptions-=L  "remove left-hand scroll bar
+
+"allow backspacing over everything in insert mode
 "set backspace=indent,eol,start
 
 "set history=50		" keep 50 lines of command line history
