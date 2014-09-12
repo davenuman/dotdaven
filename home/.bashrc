@@ -115,6 +115,8 @@ fi
 
 source $HOME/.homesick/repos/homeshick/homeshick.sh
 
+[ -f ~/.shell_prompt.sh ] && source ~/.shell_prompt.sh
+
 # Include custom bash scripts
 BASH_INC=~/.homesick/repos/dotdaven/bash_inc
 for incl in $BASH_INC/*.sh $BASH_INC/*.bash

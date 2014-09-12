@@ -20,6 +20,33 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tagbar#enabled = 1
 
+" Promptline https://github.com/edkolev/promptline.vim
+"let g:airrine#extensions#promptline#snapshot_file = "~/.shell_prompt.sh"
+let g:airrine#extensions#promptline#color_template = 'insert'
+let g:promptline_theme = 'airline'
+let branch_symbol = promptline#symbols#get().vcs_branch
+let git_info_slice = {
+      \'function_name': 'git_info',
+      \'function_body': [
+        \'function git_info {',
+        \'  local branch',
+        \'  local branch_symbol="' . branch_symbol . '"',
+        \'  local sha',
+        \'  if branch=$( { git symbolic-ref --quiet HEAD || git rev-parse --short HEAD; } 2>/dev/null ); then',
+        \'    branch=${branch##*/}',
+        \'  fi',
+        \'  sha=$(git rev-parse --short HEAD 2>/dev/null) || return 1',
+        \'  [[ $(git status --porcelain ) ]] && sha="$sha ✘"',
+        \'  printf "%s" "${branch_symbol}${branch:-unknown} $sha"',
+        \'}']}
+let g:promptline_preset = {
+	\'a' : [ promptline#slices#host() ],
+	\'b' : [ promptline#slices#user() ],
+	\'c' : [ promptline#slices#cwd() ],
+	\'y' : [ git_info_slice ],
+	\'warn' : [ promptline#slices#last_exit_code() ] }
+
+
 setl sw=2 sts=2 et
 
 " my settings
