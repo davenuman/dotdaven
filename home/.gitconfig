@@ -18,6 +18,7 @@
 	g = grep -n --color
 	d = difftool
 	vimshow = difftool HEAD^
+	lol = log --graph --date=relative --all
 [push]
 	default = simple
 [branch]
@@ -26,6 +27,10 @@
 	helper = cache --timeout=7200
 [log]
 	abbrevCommit = true
+	date = short
+	decorate = short
+[format]
+	pretty = format:%C(auto)%h %Cblue%ad%C(auto)%d %Creset%<(42,trunc)%s <%<(7,trunc)%aN>
 [diff]
 	tool = vimdiff
 [difftool]
