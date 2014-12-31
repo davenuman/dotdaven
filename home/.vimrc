@@ -74,6 +74,7 @@ set statusline+=%{fugitive#statusline()}   "git branch
 set statusline+=%c,     "cursor column
 set statusline+=%l/%L   "cursor line/total lines
 set statusline+=\ %P    "percent through file
+set noswapfile
 
 " set syntax to markdown for .md files
 au BufRead,BufNewFile *.md set filetype=markdown
@@ -95,6 +96,7 @@ set guioptions-=L  "remove left-hand scroll bar
 "allow backspacing over everything in insert mode
 "set backspace=indent,eol,start
 
+set spell
 "set history=50		" keep 50 lines of command line history
 "set ruler		" show the cursor position all the time
 "set showcmd		" display incomplete commands

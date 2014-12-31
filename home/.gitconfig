@@ -37,3 +37,6 @@
 	prompt = false
 [merge]
 	tool = vimdiff
+	ff = only
+[pull]
+	ff = only
