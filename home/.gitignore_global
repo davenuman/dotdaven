@@ -5,5 +5,3 @@
 # SASS
 *.sass-cache
 
-# Composer
-composer.lock

@@ -19,6 +19,7 @@
 	d = difftool
 	vimshow = difftool HEAD^
 	lol = log --graph --date=relative --all
+	s = show --format=medium
 [push]
 	default = simple
 [branch]
