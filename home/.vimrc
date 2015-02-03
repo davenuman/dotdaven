@@ -7,7 +7,7 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
-set background=dark
+set background=light
 colorscheme solarized
 
 " let g:syntastic_phpcs_conf=" --standard=Drupal --extensions=php,module,inc,install,test,profile,theme"

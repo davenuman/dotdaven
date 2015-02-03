@@ -1,19 +1,23 @@
 #!/bin/bash
 
-function gwatch {
-while true; do
-  git remote update
-  git log --graph --date=relative --all
-  sleep 1
-done
+gwatch ()
+{
+  LOGLINES=$((LINES/2));
+  while true; do
+    git fetch;
+    clear;
+    git log --graph --date=relative --all -$LOGLINES;
+    sleep 60;
+  done
 }
 
 gtop ()
 {
+  LOGLINES=$((LINES/2));
   while true; do
     clear;
     git status -s;
-    git log -5;
+    git log --oneline -$LOGLINES;
     sleep 4;
   done
 }
