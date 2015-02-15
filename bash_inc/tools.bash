@@ -2,7 +2,7 @@
 
 gwatch ()
 {
-  LOGLINES=$((LINES/2));
+  LOGLINES=$(((LINES*3)/5));
   while true; do
     git fetch;
     clear;
@@ -13,7 +13,7 @@ gwatch ()
 
 gtop ()
 {
-  LOGLINES=$((LINES/2));
+  LOGLINES=$(((LINES*3)/5));
   while true; do
     clear;
     git status -s;

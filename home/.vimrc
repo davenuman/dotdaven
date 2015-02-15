@@ -7,8 +7,9 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
-set background=light
 colorscheme solarized
+set background=dark
+highlight clear SignColumn " for gitgutter
 
 " let g:syntastic_phpcs_conf=" --standard=Drupal --extensions=php,module,inc,install,test,profile,theme"
 let g:syntastic_php_phpcs_args = '--standard=Drupal --report=csv  --extensions=' . drupaldetect#php_ext
@@ -33,7 +34,7 @@ set cursorline
 set modeline
 set ls=2
 set wildchar=<Tab> wildmenu wildmode=full
-set gfn=Inconsolata\ for\ Powerline\ Medium\ 28
+set gfn=Inconsolata\ for\ Powerline\ Medium\ 14
 set statusline=[%n]\    "buffer
 set statusline+=%t\      "tail of the filename
 set statusline+=[%{strlen(&fenc)?&fenc:'none'}, "file encoding
