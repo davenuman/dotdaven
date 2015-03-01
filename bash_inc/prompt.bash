@@ -15,7 +15,9 @@ function prompt() {
   local prompt_char='» '
   [[ $(__drush_ps1) ]] && prompt_char="$blue∞ "
 
-  PS1="$(scm_char) $reset_color[$blue\u$reset_color@$green\H$reset_color] $yellow\w${reset_color}$git_prompt\n$time$red$(__drush_ps1) $prompt_char$reset_color"
+  [ ${BOWLINE} ] && bowline_prompt="(${BOWLINE}) " || bowline_prompt=""
+
+  PS1="$(scm_char) $reset_color[$blue\u$reset_color@$green\H$reset_color] $yellow\w${reset_color}$git_prompt\n$time$red$(__drush_ps1) ${bowline_prompt}$prompt_char$reset_color"
   PS2='> '
   PS4='+ '
 }
