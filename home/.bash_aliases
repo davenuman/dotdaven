@@ -13,6 +13,7 @@ alias ssh='TERM=rxvt && ssh'
 alias 3cal='cal -3 `date -d "+1 month" +"%m %Y"`'
 alias vim='TERM=rxvt-unicode-256color vim'
 alias vimrc='vim $HOME/.vimrc'
+alias gvimlight='gvim +"set background=light"'
 alias t=task
 alias skype='xhost +local: && sudo -u skype /usr/bin/skype'
 alias WatchInfo="setwintitle sensors; watch -n 3 'sensors;xbacklight;uptime;redshift -p'"

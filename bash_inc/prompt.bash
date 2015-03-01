@@ -5,12 +5,7 @@ function prompt() {
 
   local time="$grey`date +%T`"
   local git_branch="$(git_short_sha)$(scm_prompt_info)"
-  if [[ $git_branch ]]
-  then
-    git_prompt=" $git_branch "
-  else
-    git_prompt=" "
-  fi
+  git_prompt=" ${git_branch-''} "
 
   local prompt_char='» '
   [[ $(__drush_ps1) ]] && prompt_char="$blue∞ "
