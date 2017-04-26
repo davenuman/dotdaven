@@ -7,7 +7,7 @@ alias dr='drush'
 alias h='drush_help'
 alias si='drush_si'
 alias retool='drush pm-disable -y toolbar && drush pm-enable -y admin_menu admin_menu_toolbar'
-alias fastplay='mplayer -af scaletempo -speed 1.21'
+alias fastplay='mplayer -af scaletempo'
 alias less='less -R'
 alias ssh='TERM=rxvt && ssh'
 alias 3cal='cal -3 `date -d "+1 month" +"%m %Y"`'
@@ -17,7 +17,12 @@ alias gvimlight='gvim +"set background=light"'
 alias t=task
 alias skype='xhost +local: && sudo -u skype /usr/bin/skype'
 alias WatchInfo="setwintitle sensors; watch -n 3 'sensors;xbacklight;uptime;redshift -p'"
-#
+alias fig=docker-compose
+alias dc=docker-compose
+alias a='. bin/activate'
+alias dm='docker-machine'
+alias j='diary'
+
 # dir listing
 alias l='ls -alh'
 alias la='ls -A'

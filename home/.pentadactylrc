@@ -3,12 +3,17 @@
 loadplugins '\.(js|penta)$'
 group user
 colorscheme solarized-light
-highlight Hint font-family: Sans; font-size: 16px; font-weight: bold; color: white; background-color: red; border-color: ButtonShadow; border-width: 0px; border-style: solid; padding: 0px 1px 0px 1px;
+highlight Hint font: bold 16px "Droid Sans Mono", monospace !important; margin: -.2ex; padding: 0 0 0 1px; outline: 1px solid rgba(0, 43, 54, .5); background: rgba(253, 246, 227, .8); color: black; font-size: 28px;
+"  highlight CompItem -append font-size:16px !important;
+
+
+"highlight Hint -append font-size: 20px;
+highlight CompItem -append font-size:16px !important;
+
 set guioptions=s
 set hintkeys=asdfglkjhtyrueivbncmx
-set showtabline=multitab
-
-au PageLoadPre http|https zoom! 120
+set showtabline=never
+set defsearch=duckduckgo
 
 map -b zi ZI
 map -b zo ZO

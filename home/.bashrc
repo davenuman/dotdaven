@@ -134,6 +134,7 @@ export HISTIGNORE='history*'
 export EDITOR=vim
 export BROWSER=google-chrome-stable
 export PATH=$PATH:~/.gem/ruby/2.1.0/bin
+export DIARY_DIR=~/notes/log
 
 function setwintitle() {
   echo -en "\033]0;$@\007";

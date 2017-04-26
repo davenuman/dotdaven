@@ -4,6 +4,8 @@ call pathogen#infect('~/.vim/bundle/{}')
 call pathogen#infect('~/.drush/vimrc/bundle/{}')
 " End of vimrc-install additions.
 execute pathogen#infect()
+call pathogen#helptags()
+
 syntax on
 filetype plugin indent on
 
@@ -34,7 +36,7 @@ set cursorline
 set modeline
 set ls=2
 set wildchar=<Tab> wildmenu wildmode=full
-set gfn=Inconsolata\ for\ Powerline\ Medium\ 14
+set gfn=Inconsolata-dz\ for\ Powerline\ 12
 set statusline=[%n]\    "buffer
 set statusline+=%t\      "tail of the filename
 set statusline+=[%{strlen(&fenc)?&fenc:'none'}, "file encoding
@@ -55,7 +57,7 @@ au BufRead,BufNewFile *.md set filetype=markdown
 " twig files
 au BufRead,BufNewFile *.twig set filetype=html
 " gherkin
-au FileType cucumber setl sw=4 sts=4 et
+au FileType cucumber setl sw=2 sts=2 et
 " bash
 au FileType sh setl sw=2 sts=2 et
 
@@ -76,3 +78,6 @@ set spell
 "set showcmd		" display incomplete commands
 "set incsearch		" do incremental searching
 "set autoindent		" always set autoindenting on
+
+map <a-j> <c-w>w
+map <a-k> <c-w>W

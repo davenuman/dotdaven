@@ -2,7 +2,7 @@
 	name = David Numan
 	email = david.numan@civicactions.com
 [core]
-	autocrlf = false
+	#autocrlf = false
 	excludesfile = /home/dave/.gitignore_global
 [diff]
 [color]
@@ -33,7 +33,8 @@
 [format]
 	pretty = format:%C(auto)%h %Cblue%ad%C(auto)%d %Creset%<(42,trunc)%s <%<(7,trunc)%aN>
 [diff]
-	tool = vimdiff
+	tool = gvimdiff
+	context = 0
 [difftool]
 	prompt = false
 [merge]
@@ -41,3 +42,9 @@
 	ff = only
 [pull]
 	ff = only
+	rebase = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	process = git-lfs filter-process
+	required = true
+	smudge = git-lfs smudge -- %f
