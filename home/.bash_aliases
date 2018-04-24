@@ -45,3 +45,9 @@ alias rv='git remote -v'
 alias staged='git diff --staged'
 alias backone='git co HEAD^ && git show --stat'
 
+# Jira
+alias jaddcomment='jiracli --issue-comment-add $ISSUE'
+alias jcomments='jiracli -i $ISSUE --issue-comments'
+alias jdesc='jiracli -i $ISSUE --issue-desc'
+alias jissue='jiracli -i $ISSUE'
+
