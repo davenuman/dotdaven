@@ -1,30 +1,52 @@
 [user]
 	name = David Numan
-	email = dave@gv.ca
+	email = davidnuman@gmail.com
 [core]
-	autocrlf = false
+	#autocrlf = false
+	excludesfile = /home/dave/.gitignore_global
 [diff]
 [color]
 	branch = auto
 	diff = auto
 	interactive = auto
 	status = auto
-[giggle]
-	main-window-maximized = true
-	main-window-geometry = 0x0+0+0
-	history-view-vpane-position = 376
-	main-window-view = HistoryView
-	file-view-vpane-position = 326
-	file-view-hpane-position = 321
 [alias]
 	co = checkout
 	ci = commit
 	st = status
 	graphlog = log --oneline --graph --branches
 	g = grep -n --color
+	d = difftool
+	vimshow = difftool HEAD^
+	lol = log --graph --date=relative --all
+	s = show --format=medium
 [push]
 	default = simple
 [branch]
 	autosetuprebase = always
 [credential]
 	helper = cache --timeout=7200
+[log]
+	abbrevCommit = true
+	date = short
+	decorate = short
+[format]
+	pretty = format:%C(auto)%h %Cblue%ad%C(auto)%d %Creset%<(42,trunc)%s <%<(7,trunc)%aN>
+[diff]
+	tool = gvimdiff
+	context = 0
+[difftool]
+	prompt = false
+[merge]
+	tool = vimdiff
+	ff = only
+[pull]
+	ff = only
+	rebase = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	process = git-lfs filter-process
+	required = true
+	smudge = git-lfs smudge -- %f
+[init]
+	defaultBranch = main
